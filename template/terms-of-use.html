@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use - Roamora</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=globe">
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<style>
+    /* TEMPORARY TEST - Add this in your head section */
+    header {
+        position: fixed !important;
+        top: 0 !important;
+        background: transparent;
+        z-index: 9999 !important;
+        width: 100% !important;
+    }
+    body { 
+        padding-top: 80px !important; 
+        width: 100% !important;
+        margin: 0 !important;
+        background-color: #1a1a1a !important;
+        color: #e0e0e0 !important;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+    }
+    
+    /* Terms of Use Specific Styles */
+    .terms-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    
+    .terms-header {
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 40px;
+        background: linear-gradient(135deg, #222 0%, #333 100%);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .terms-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+    }
+    
+    .terms-header h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        color: #fff;
+        font-weight: 700;
+        background: linear-gradient(90deg, #fff, #aaa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .terms-header p {
+        font-size: 1.2rem;
+        color: #aaa;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .last-updated {
+        background: #2a2a2a;
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #ccc;
+    }
+    
+    .terms-content {
+        background-color: #222;
+        border-radius: 15px;
+        padding: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        margin-bottom: 40px;
+    }
+    
+    .terms-section {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #333;
+    }
+    
+    .terms-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .terms-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .terms-section h2 i {
+        color: #4ecdc4;
+        width: 30px;
+        text-align: center;
+    }
+    
+    .terms-section p {
+        margin-bottom: 15px;
+        color: #ccc;
+        text-align: justify;
+    }
+    
+    .terms-section ul, .terms-section ol {
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .terms-section li {
+        margin-bottom: 10px;
+        color: #ccc;
+        padding-left: 10px;
+    }
+    
+    .terms-section strong {
+        color: #fff;
+        font-weight: 600;
+    }
+    
+    .highlight-box {
+        background: #2a2a2a;
+        padding: 25px;
+        border-radius: 10px;
+        margin: 25px 0;
+        border-left: 4px solid #4ecdc4;
+    }
+    
+    .highlight-box h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+    }
+    
+    .warning-box {
+        background: linear-gradient(135deg, #332222 0%, #442222 100%);
+        padding: 25px;
+        border-radius: 10px;
+        margin: 25px 0;
+        border-left: 4px solid #ff6b6b;
+    }
+    
+    .warning-box h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .warning-box h3 i {
+        color: #ff6b6b;
+    }
+    
+    .terms-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        background: #2a2a2a;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .terms-table th {
+        background: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: left;
+        font-weight: 600;
+        border-bottom: 2px solid #444;
+    }
+    
+    .terms-table td {
+        padding: 15px;
+        color: #ccc;
+        border-bottom: 1px solid #333;
+    }
+    
+    .terms-table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    .terms-table tr:hover {
+        background: #2f2f2f;
+    }
+    
+    .acceptance-section {
+        background: linear-gradient(135deg, #222 0%, #2a2a2a 100%);
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 50px;
+        border: 2px solid #333;
+    }
+    
+    .acceptance-section h2 {
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+    
+    .acceptance-section p {
+        color: #ccc;
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .acceptance-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .accept-btn {
+        padding: 15px 30px;
+        border-radius: 50px;
+        border: 2px solid;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+    }
+    
+    .accept-btn.agree {
+        background: #4ecdc4;
+        color: #fff;
+        border-color: #4ecdc4;
+    }
+    
+    .accept-btn.agree:hover {
+        background: #3bbbb3;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+    }
+    
+    .accept-btn.disagree {
+        background: transparent;
+        color: #ccc;
+        border-color: #666;
+    }
+    
+    .accept-btn.disagree:hover {
+        background: #333;
+        color: #fff;
+    }
+    
+    .quick-nav {
+        position: sticky;
+        top: 100px;
+        background: #222;
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .quick-nav h3 {
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .quick-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .quick-nav li {
+        margin-bottom: 12px;
+    }
+    
+    .quick-nav a {
+        color: #ccc;
+        text-decoration: none;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0;
+        border-bottom: 1px solid transparent;
+    }
+    
+    .quick-nav a:hover {
+        color: #4ecdc4;
+        border-bottom: 1px solid #4ecdc4;
+        transform: translateX(5px);
+    }
+    
+    .quick-nav a i {
+        font-size: 0.8rem;
+        color: #666;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .terms-container {
+            padding: 20px 15px;
+        }
+        
+        .terms-header {
+            padding: 30px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .terms-header h1 {
+            font-size: 2.2rem;
+        }
+        
+        .terms-content {
+            padding: 30px 25px;
+        }
+        
+        .terms-section h2 {
+            font-size: 1.5rem;
+        }
+        
+        .acceptance-section {
+            padding: 30px 20px;
+        }
+        
+        .acceptance-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .accept-btn {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+        }
+        
+        .terms-table {
+            display: block;
+            overflow-x: auto;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .terms-header h1 {
+            font-size: 1.8rem;
+        }
+        
+        .terms-content {
+            padding: 25px 15px;
+        }
+        
+        .terms-section h2 {
+            font-size: 1.3rem;
+        }
+        
+        .highlight-box, .warning-box {
+            padding: 20px 15px;
+        }
+        
+        .quick-nav {
+            padding: 20px 15px;
+        }
+    }
+    
+    /* Print Styles */
+    @media print {
+        body {
+            background: white !important;
+            color: black !important;
+        }
+        
+        .terms-header, .terms-content {
+            box-shadow: none;
+            background: white !important;
+            color: black !important;
+        }
+        
+        .acceptance-section, .quick-nav {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <header>
+    <nav class="glass-navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2><b>Roamora</b>
+                       
+                </h2>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="post.html" class="nav-link">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>Posts</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>About</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                  
+                <button class="auth-btn">FAQ</button>
+            </div>
+
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="terms-container">
+    <div class="terms-header">
+        <h1>Terms of Use</h1>
+        <p>Please read these terms carefully before using Roamora. By accessing or using our services, you agree to be bound by these terms.</p>
+        <div class="last-updated">
+            <i class="fa-solid fa-clock"></i> Last Updated: January 1, 2025
+        </div>
+    </div>
+    
+    <div class="quick-nav">
+        <h3><i class="fa-solid fa-bookmark"></i> Quick Navigation</h3>
+        <ul>
+            <li><a href="#acceptance"><i class="fa-solid fa-chevron-right"></i> Acceptance of Terms</a></li>
+            <li><a href="#account"><i class="fa-solid fa-chevron-right"></i> User Accounts</a></li>
+            <li><a href="#content"><i class="fa-solid fa-chevron-right"></i> Content Guidelines</a></li>
+            <li><a href="#intellectual"><i class="fa-solid fa-chevron-right"></i> Intellectual Property</a></li>
+            <li><a href="#prohibited"><i class="fa-solid fa-chevron-right"></i> Prohibited Activities</a></li>
+            <li><a href="#termination"><i class="fa-solid fa-chevron-right"></i> Termination</a></li>
+            <li><a href="#liability"><i class="fa-solid fa-chevron-right"></i> Limitation of Liability</a></li>
+        </ul>
+    </div>
+    
+    <div class="terms-content">
+        <div class="terms-section" id="acceptance">
+            <h2><i class="fa-solid fa-check-circle"></i> 1. Acceptance of Terms</h2>
+            <p>By accessing and using Roamora ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. Additionally, when using these particular services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
+            <p>If you do not agree to these terms, please do not use our Service. We reserve the right to update and change these Terms of Use without notice. Continued use of the Service after any such changes shall constitute your consent to such changes.</p>
+            
+            <div class="highlight-box">
+                <h3>Key Points:</h3>
+                <ul>
+                    <li>You must be at least 16 years old to use this service</li>
+                    <li>By using Roamora, you agree to all terms outlined here</li>
+                    <li>We may update these terms periodically</li>
+                    <li>Continued use constitutes acceptance of changes</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="terms-section" id="account">
+            <h2><i class="fa-solid fa-user"></i> 2. User Accounts</h2>
+            <p>To access certain features of the Service, you may be required to create an account. You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer.</p>
+            <p>You agree to accept responsibility for all activities that occur under your account or password. You may not use another person's account at any time without the permission of the account holder.</p>
+            
+            <div class="warning-box">
+                <h3><i class="fa-solid fa-exclamation-triangle"></i> Account Security</h3>
+                <p>You must immediately notify us of any unauthorized uses of your account or any other breaches of security. Roamora will not be liable for any acts or omissions by you, including any damages of any kind incurred as a result of such acts or omissions.</p>
+            </div>
+            
+            <h3>Account Requirements:</h3>
+            <ul>
+                <li>Provide accurate and complete registration information</li>
+                <li>Maintain and promptly update your information</li>
+                <li>You are responsible for all activities under your account</li>
+                <li>Notify us immediately of any security breaches</li>
+                <li>You may not create multiple accounts for abusive purposes</li>
+            </ul>
+        </div>
+        
+        <div class="terms-section" id="content">
+            <h2><i class="fa-solid fa-file-lines"></i> 3. Content Guidelines</h2>
+            <p>Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material ("Content"). You are responsible for the Content that you post to the Service.</p>
+            
+            <table class="terms-table">
+                <thead>
+                    <tr>
+                        <th>Content Type</th>
+                        <th>Allowed</th>
+                        <th>Not Allowed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Travel Photos</td>
+                        <td><i class="fa-solid fa-check" style="color: #4ecdc4;"></i> Original content with proper credits</td>
+                        <td><i class="fa-solid fa-xmark" style="color: #ff6b6b;"></i> Copyrighted images without permission</td>
+                    </tr>
+                    <tr>
+                        <td>Travel Stories</td>
+                        <td><i class="fa-solid fa-check" style="color: #4ecdc4;"></i> Personal experiences and reviews</td>
+                        <td><i class="fa-solid fa-xmark" style="color: #ff6b6b;"></i> Plagiarized or fake content</td>
+                    </tr>
+                    <tr>
+                        <td>Comments</td>
+                        <td><i class="fa-solid fa-check" style="color: #4ecdc4;"></i> Constructive feedback and discussions</td>
+                        <td><i class="fa-solid fa-xmark" style="color: #ff6b6b;"></i> Hate speech or harassment</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>We reserve the right to remove any Content that violates these Terms or that we find otherwise objectionable.</p>
+        </div>
+        
+        <div class="terms-section" id="intellectual">
+            <h2><i class="fa-solid fa-copyright"></i> 4. Intellectual Property</h2>
+            <p>The Service and its original content, features, and functionality are and will remain the exclusive property of Roamora and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries.</p>
+            <p>Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Roamora.</p>
+            
+            <div class="highlight-box">
+                <h3>User Content License</h3>
+                <p>By posting Content to the Service, you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through the Service. You retain any and all of your rights to any Content you submit, post or display on or through the Service.</p>
+            </div>
+        </div>
+        
+        <div class="terms-section" id="prohibited">
+            <h2><i class="fa-solid fa-ban"></i> 5. Prohibited Activities</h2>
+            <p>You may not access or use the Service for any purpose other than that for which we make the Service available. The Service may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.</p>
+            
+            <h3>Specifically, you agree not to:</h3>
+            <ul>
+                <li>Systematically retrieve data or other content from the Service</li>
+                <li>Make any unauthorized use of the Service</li>
+                <li>Circumvent, disable, or otherwise interfere with security-related features</li>
+                <li>Engage in unauthorized framing of or linking to the Service</li>
+                <li>Upload or transmit viruses or any other type of malicious code</li>
+                <li>Use the Service in any manner that could interfere with, disrupt, or burden the Service</li>
+                <li>Use the Service to compete with Roamora</li>
+                <li>Decipher, decompile, disassemble, or reverse engineer any of the software</li>
+                <li>Harass, annoy, intimidate, or threaten any of our employees or agents</li>
+            </ul>
+        </div>
+        
+        <div class="terms-section" id="termination">
+            <h2><i class="fa-solid fa-power-off"></i> 6. Termination</h2>
+            <p>We may terminate or suspend your account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
+            <p>If you wish to terminate your account, you may simply discontinue using the Service or delete your account through your account settings.</p>
+            
+            <div class="warning-box">
+                <h3><i class="fa-solid fa-exclamation-triangle"></i> Termination Consequences</h3>
+                <p>Upon termination, your right to use the Service will immediately cease. All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+            </div>
+        </div>
+        
+        <div class="terms-section" id="liability">
+            <h2><i class="fa-solid fa-scale-balanced"></i> 7. Limitation of Liability</h2>
+            <p>In no event shall Roamora, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.</p>
+            
+            <h3>This includes damages resulting from:</h3>
+            <ul>
+                <li>Your access to or use of or inability to access or use the Service</li>
+                <li>Any conduct or content of any third party on the Service</li>
+                <li>Any content obtained from the Service</li>
+                <li>Unauthorized access, use or alteration of your transmissions or content</li>
+            </ul>
+            
+            <p>The limitations of this subsection shall apply to any theory of liability, whether based on warranty, contract, statute, tort (including negligence) or otherwise, and whether or not Roamora has been informed of the possibility of any such damage.</p>
+        </div>
+        
+        <div class="acceptance-section">
+            <h2>Accept These Terms</h2>
+            <p>By using Roamora, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use. If you do not agree to these terms, please discontinue use of our Service immediately.</p>
+            <div class="acceptance-buttons">
+                <button class="accept-btn agree" onclick="acceptTerms()">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    I Accept These Terms
+                </button>
+                <button class="accept-btn disagree" onclick="declineTerms()">
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    I Do Not Accept
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>Roamora</h2>
+      <p>Your daily hub for travel insights, stories, and adventures. Explore the world with fresh content every week!</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="post.html">Latest Posts</a></li>
+        <li><a href="#">Trending Topics</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-categories">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">Adventure</a></li>
+        <li><a href="#">Lifestyle</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Photography</a></li>
+      </ul> 
+    </div>
+
+    <div class="footer-newsletter">
+      <h3>Join Our Newsletter</h3>
+      <p>Subscribe to get exclusive travel stories, tips, and destination guides straight to your inbox.</p>
+      <form action="#">
+        <input type="email" placeholder="Enter your email" required>
+        <button class="sub-btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <p>© 2025 Roamora. All Rights Reserved.</p>
+      <p>Designed by Natsumi</p>
+    </div>
+
+    <div class="footer-extra-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<!-- 🔝 Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+    // Terms acceptance functionality
+    function acceptTerms() {
+        // In a real application, this would save acceptance to user's profile
+        alert('Thank you for accepting our Terms of Use! You can now enjoy all features of Roamora.');
+        // Redirect to home or previous page
+        // window.location.href = 'index.html';
+    }
+    
+    function declineTerms() {
+        if(confirm('You must accept our Terms of Use to continue using Roamora. Would you like to review them again?')) {
+            // Stay on page
+            window.scrollTo(0, 0);
+        } else {
+            // Redirect away
+            window.location.href = 'index.html';
+        }
+    }
+    
+    // Smooth scrolling for quick navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const quickNavLinks = document.querySelectorAll('.quick-nav a');
+        
+        quickNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add active class to current section in quick nav
+        const sections = document.querySelectorAll('.terms-section');
+        const navLinks = document.querySelectorAll('.quick-nav a');
+        
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                    link.style.color = '#4ecdc4';
+                    link.style.borderBottom = '1px solid #4ecdc4';
+                }
+            });
+        });
+    });
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
